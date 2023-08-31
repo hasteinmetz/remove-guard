@@ -27,3 +27,11 @@ remove() {
             command rm $@
     fi
 }
+
+# place in your .bashrc or .bash_profile file:
+#
+# alias rmv='remove'
+# remover() {
+#    echo "Use rmv instead command"
+# }
+# alias rm='remover'
