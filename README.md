@@ -2,6 +2,8 @@
 
 Ask first for confirmation whenever `rm -r` is called in a `bash` shell session. The repository consists of a function to add to your `.bashrc` or `.bash_profile` file.
 
+The primary goal of `rmv -r` is to reduce keyboard input errors (for instance, accidentally hitting enter after scrolling through previous commands) or "muscle memory" errors that might occur when deleting repositories routinely. I decided to write this function after discovering that there were no good solutions to efficiently and carefully delete repositories using standard `bash` commands; either you need to remove each file separately or remove a directory without any confirmation. `rmv -r` falls somewhere in between these two options, asking for confirmation before deleting.
+
 ## Set up
 
 Place the `remove` function in the `rm_alias` file in your `.bashrc` or `.bash_profile` file. Add an alias for `remove` (such as `rmv`) function to the `.bashrc` file with `alias rmv='remove'`.
@@ -40,5 +42,3 @@ rmv -r docs
     >>> ...
 *** Are you sure? [Y/n]:
 ```
-
-The primary goal of `rmv -r` is to reduce keyboard input errors (for instance, accidentally hitting enter after scrolling through previous commands) or "muscle memory" errors that might occur when deleting repositories. I decided to write this code after discovering that there was no good solutions to efficiently and carefully delete repositories using standard `bash` commands; either you need to remove each file separately or remove a directory without any confirmation. `rmv -r` falls somewhere in between these two options, asking for confirmation before deleting.
